@@ -9,7 +9,7 @@
 ## Data Download
 Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpace Downloader Tool. 
 - 103 Paired-End sample reads were downloaded. They are named using the following syntax:
-  - `100_S100_L001` indicates a unique ID + _ + sample ID + run ID and then followed by 
+  - `100_S100_L001` indicates a unique ID + _ + sample ID + _ + run ID and then followed by 
   -  R1 for forward reads and R2 for reverse reads
   -  Files are stored in gz format (fastq.gz) 
 - Total File Size reported by Illumina: 5.58Gb

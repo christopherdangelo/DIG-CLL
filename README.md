@@ -54,7 +54,7 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l
 ls -1a */fastqc_data.txt > fastqc_data_files.list
 ```
 2. This generates a file called `fastqc_data_files.list`. You can store this in the fastqc folder or wherever you prefer, just keep track of where this list is.
-3. Then, you can run the Python 3 script 
+3. Then, you can run the Python 3 script found here:
 - asdasd
 
 ## QIIME Analysis

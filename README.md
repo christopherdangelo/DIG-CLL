@@ -20,7 +20,7 @@ Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpac
 ## FastQC Analysis
 Each file was run through FASTQC 0.11.7. Results can be found under `/home/biocore/kdempsey/elgamal/fastqc/` 
 1. Software can be loaded on HCC using `module load fastqc/0.11`
-2. The script used to run the fastqc analysis can be found here: [run_fastqc.sh](https://github.com/kmcooper/elgamal/blob/main/FASTQC%20Analysis/run_fastqc.sh)
+2. The script used to run the fastqc analysis can be found here: [run_fastqc.sh](https://github.com/christopherdangelo/DIG-CLL/blob/main/FASTQC_Analysis/run_fastqc.sh)
 3. To run the command, use `sh run_fastqc.sh`
 This command was short enough to run on the login node, but could be transformed into a SLURM file later if it becomes problematic.
 
@@ -29,7 +29,7 @@ After this run was completed, we wanted to determine if adapter sequences needed
 ### Checking Adapter Content
 1. Navigate to the directory where FASTQC folders are located. In our analysis, it was`/home/biocore/kdempsey/elgamal/fastqc/` 
 2. FASTQC puts all the results in a .zip file with accompanying HTML file. Since we are looking at 206 files remotely we do not want to 'spot check' each by eye. We need to access the data in txt format. 
-3. To do this, we unzip all the fastqc files in the fastqc directory using this script: [unzip_fastqc.sh](https://github.com/kmcooper/elgamal/blob/main/FASTQC%20Analysis/unzip_fastqc.sh)
+3. To do this, we unzip all the fastqc files in the fastqc directory using this script: [unzip_fastqc.sh](https://github.com/christopherdangelo/DIG-CLL/blob/main/FASTQC_Analysis/unzip_fastqc.sh)
 4. Each zip file then gets expanded to a folder named after the .fastq file it was created for and contains a number of files. We want to access the `fastqc_data.txt` file, which contains the same information that is contained the report's HTML file ([an example can be found here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html#M10).
 5. We used a simple grep statement to check and see how many of each of these files passed the 'Adapter Content' test in FASTQC:
 ```

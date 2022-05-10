@@ -22,7 +22,7 @@ Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpac
   - HCC (4Gb)
   - Online BaseSpace (5Gb)
 - Illumina reports 268,790 total raw reads in the dataset
-- Data was then moved to the `/home/biocore/kdempsey/elgamal` folder
+- Data was then moved to the `/home/biocore/kdempsey/elgamal/adaptive_model/fastq/` folder
 
 ### Progression Model
 Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace Downloader Tool. 
@@ -35,7 +35,7 @@ Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace 
   - HCC (4Gb)
   - Online BaseSpace (7.08Gb)
 - Illumina reports 339,982 total raw reads in the dataset
-- Data was then moved to the `/home/biocore/kdempsey/elgamal` folder
+- Data was then moved to the `/home/biocore/kdempsey/elgamal/progression_model/fastq/` folder
 
 ### Transfer to HCC
 Kate will add details (this is relatively simple) at a later date. SCP was used on the command line

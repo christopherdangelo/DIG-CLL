@@ -87,7 +87,13 @@ The documentation for QIIME2 2022.2 can be found here: https://docs.qiime2.org/2
 Please make sure that you are looking at the right documentation; it should tell you the version you are looking at in the left hand corner of the screen:  
 ![QIIME2 documentation](https://github.com/christopherdangelo/DIG-CLL/blob/main/images/QIIME2_documentation_website_screengrab.png)  
 
-Phred 33!!
+Phred 33 is the newer version, Phred 64 was used for older Illumina machines; this data uses Phred 33 
+```
+qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \   
+  --input-path manifest \  
+  --output-path paired-end-demux.qza \  
+  --input-format PairedEndFastqManifestPhred33V2  
+```
 ### Microbiome Work
 
 

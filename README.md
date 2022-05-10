@@ -7,7 +7,7 @@
 - QIIME2 2022.2
 
 ## Dataset Description
-"Adoptive Transfer model" refers to 16s rRNA analysis of fecal pellets from mice treated with antibiotics + controls
+"Adoptive Transfer model" refers to 16s rRNA analysis of fecal pellets from mice treated with antibiotics + controls.  
 "Progression model" refers to 16s rRNA analysis of fecal pellets untreated mice collected over time.
 
 ## Data Download

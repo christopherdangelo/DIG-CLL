@@ -18,20 +18,24 @@ Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpac
   -  R1 for forward reads and R2 for reverse reads
   -  Files are stored in gz format (fastq.gz) 
 - Total File Size reported by Illumina: 5.58Gb
--   Kate to do: resolve inconsistency between download on BaseSpace downloader (3Gb), HCC (4Gb), and online BaseSpace (5Gb)
+  - BaseSpace downloader (3Gb) 
+  - HCC (4Gb)
+  - Online BaseSpace (5Gb)
 - Illumina reports 268,790 total raw reads in the dataset
-- Data was then move to the `/home/biocore/kdempsey/elgamal`
+- Data was then moved to the `/home/biocore/kdempsey/elgamal` folder
 
 ### Progression Model
 Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace Downloader Tool. 
-- 103 Paired-End sample reads were downloaded. They are named using the following syntax:
+- XXX Paired-End sample reads were downloaded. They are named using the following syntax:
   - `100_S100_L001` indicates a unique ID + _ + sample ID + _ + run ID and then followed by 
   -  R1 for forward reads and R2 for reverse reads
   -  Files are stored in gz format (fastq.gz) 
-- Total File Size reported by Illumina: 5.58Gb
--   Kate to do: resolve inconsistency between download on BaseSpace downloader (3Gb), HCC (4Gb), and online BaseSpace (5Gb)
-- Illumina reports 268,790 total raw reads in the dataset
-- Data was then move to the `/home/biocore/kdempsey/elgamal`
+- Total File Size reported by Illumina: 7.08Gb
+  - BaseSpace downloader (3Gb) 
+  - HCC (4Gb)
+  - Online BaseSpace (5Gb)
+- Illumina reports XXXXXXXX total raw reads in the dataset
+- Data was then moved to the `/home/biocore/kdempsey/elgamal` folder
 
 ## FastQC Analysis
 Each file was run through FASTQC 0.11.7. Results can be found under `/home/biocore/kdempsey/elgamal/fastqc/` 

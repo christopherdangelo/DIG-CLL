@@ -34,7 +34,7 @@ Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace 
   - BaseSpace downloader (5.34Gb) 
   - HCC (4Gb)
   - Online BaseSpace (7.08Gb)
-- Illumina reports XXXXXXXX total raw reads in the dataset
+- Illumina reports 339,982 total raw reads in the dataset
 - Data was then moved to the `/home/biocore/kdempsey/elgamal` folder
 
 ## FastQC Analysis

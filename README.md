@@ -6,8 +6,24 @@
 - FASTQC 0.11.7
 - QIIME2 2022.2
 
+## Dataset Description
+"Adoptive Transfer model" refers to 16s rRNA analysis of fecal pellets from mice treated with antibiotics + controls
+"Progression model" refers to 16s rRNA analysis of fecal pellets untreated mice collected over time.
+
 ## Data Download
+### Adoptive Transfer Model
 Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpace Downloader Tool. 
+- 103 Paired-End sample reads were downloaded. They are named using the following syntax:
+  - `100_S100_L001` indicates a unique ID + _ + sample ID + _ + run ID and then followed by 
+  -  R1 for forward reads and R2 for reverse reads
+  -  Files are stored in gz format (fastq.gz) 
+- Total File Size reported by Illumina: 5.58Gb
+-   Kate to do: resolve inconsistency between download on BaseSpace downloader (3Gb), HCC (4Gb), and online BaseSpace (5Gb)
+- Illumina reports 268,790 total raw reads in the dataset
+- Data was then move to the `/home/biocore/kdempsey/elgamal`
+
+### Progression Model
+Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace Downloader Tool. 
 - 103 Paired-End sample reads were downloaded. They are named using the following syntax:
   - `100_S100_L001` indicates a unique ID + _ + sample ID + _ + run ID and then followed by 
   -  R1 for forward reads and R2 for reverse reads

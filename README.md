@@ -37,6 +37,9 @@ Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace 
 - Illumina reports 339,982 total raw reads in the dataset
 - Data was then moved to the `/home/biocore/kdempsey/elgamal` folder
 
+### Transfer to HCC
+Kate will add details (this is relatively simple) at a later date. SCP was used on the command line
+
 ## FastQC Analysis
 Each file was run through FASTQC 0.11.7. Results can be found under `/home/biocore/kdempsey/elgamal/fastqc/` 
 1. Software can be loaded on HCC using `module load fastqc/0.11`

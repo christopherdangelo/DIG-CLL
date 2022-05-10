@@ -81,8 +81,10 @@ ls -1a */fastqc_data.txt > fastqc_data_files.list
 - asdasd
 
 ## QIIME Analysis
-QIIME2 version 2022.2 was used   
+QIIME2 version 2022.2 was used; you can invoke it by running the following command:
 `module load qiime2/2022.2`
+The documentation for QIIME2 2022.2 can be found here: https://docs.qiime2.org/2022.2/ 
+Please make sure that you are looking at the right documentation; it should tell you the version you are looking at in the left hand corner of the screen:
 
 ### Microbiome Work
 

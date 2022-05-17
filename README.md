@@ -85,7 +85,7 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l
 # See the 'Checking Adapter Content' to see how to do this automatically
 ls -la */fastqc_data.txt > fastqc_data_files.list
 ```
-This generates a file called `fastqc_data_files.list`. You can store this in the fastqc folder or wherever you prefer, just keep track of where this list is. Then, you can run the Python 3 script found here: 
+This generates a file called `fastqc_data_files.list`. You can store this in the fastqc folder or wherever you prefer, just keep track of where this list is. Then, you can run the Python 3 script found here: [parse_fastq_data.py](https://github.com/christopherdangelo/DIG-CLL/blob/main/FASTQC_Analysis/parse_fastqc_data.py)
 ```
 python3 parse_fastqc_data.py | sort | uniq
 ```

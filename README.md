@@ -4,7 +4,7 @@
 - [Project Computational Dependencies](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/project_dependencies.md)
 - [Data Download and Description](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/data_description.md)
 - [Project Computing Environment: Holland Computing Center](https://hcc.unl.edu/)
-- [Data Quality Check]()
+- [Initial Data Quality Check](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/initial_quality_check.md)
 
 ## FastQC Analysis
 Each file was run through FASTQC 0.11.7. Results can be found under `/home/biocore/kdempsey/elgamal/fastqc/` 

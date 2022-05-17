@@ -16,7 +16,7 @@ Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpac
 - 103 Paired-End sample reads were downloaded. They are named using the following syntax:
   - `100_S100_L001` indicates a unique ID + _ + sample ID + _ + run ID and then followed by 
   -  R1 for forward reads and R2 for reverse reads
-  -  Files are stored in gz format (fastq.gz) 
+  -  206 files total, stored in gz format (fastq.gz) 
 - Total File Size reported by Illumina: 5.58Gb
   - BaseSpace downloader (3Gb) 
   - HCC (4Gb)
@@ -26,10 +26,10 @@ Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpac
 
 ### Progression Model
 Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace Downloader Tool. 
-- XXX Paired-End sample reads were downloaded. They are named using the following syntax:
+- 91 Paired-End sample reads were downloaded. They are named using the following syntax:
   - `100_S100_L001` indicates a unique ID + _ + sample ID + _ + run ID and then followed by 
   -  R1 for forward reads and R2 for reverse reads
-  -  Files are stored in gz format (fastq.gz) 
+  -  182 files total, stored in gz format (fastq.gz)
 - Total File Size reported by Illumina: 7.08Gb
   - BaseSpace downloader (5.34Gb) 
   - HCC (4Gb)
@@ -60,7 +60,16 @@ After this run was completed, we wanted to determine if adapter sequences needed
 cat */fastqc_data.txt | grep "Adapter Content" | grep "PASS" -i | wc -l
 cat */fastqc_data.txt | grep "Adapter Content" | grep "FAIL" -i | wc -l
 ```
+### Adoptive Model
 We have 103 samples and therefore 206 read files (one forward .fastq.gz and one reverse .fastq.gz file per sample). We should see 206 files passing the Adapter Content test:
+```
+$ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l  
+206  
+$ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l  
+0
+```
+### Progression Model
+We have 91 samples and therefore 182 read files (one forward .fastq.gz and one reverse .fastq.gz file per sample). We should see 182 files passing the Adapter Content test:
 ```
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l  
 206  

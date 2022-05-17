@@ -12,3 +12,4 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
   --output-path paired-end-demux.qza \  
   --input-format PairedEndFastqManifestPhred33V2  
 ```
+Cutadapt docs: https://docs.qiime2.org/2022.2/plugins/available/cutadapt/trim-paired/

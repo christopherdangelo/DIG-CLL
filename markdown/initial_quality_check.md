@@ -52,7 +52,7 @@ This Python script opens each FASTQC report summary and identifies at what lengt
 #### Adoptive Model
 ```
 python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq
-**205-209**
+205-209
 220-224
 225-229
 245-249
@@ -65,7 +65,7 @@ python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq
 #### Progression Model
 ```
 python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq
-**205-209**
+205-209
 220-224
 225-229
 245-249

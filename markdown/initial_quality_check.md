@@ -48,6 +48,7 @@ This generates a file called `fastqc_data_files.list`. You can store this in the
 python3 parse_fastqc_data.py | sort | uniq
 ```
 This Python script opens each FASTQC report summary and identifies at what length the reads in that report fall below some quality threshold coded in the Python script as the `threshold` variable. The output of this script + bash commands will give you the lengths at which reads in that dataset start to fall below the quality threshold.
+
 #### Adoptive Model
 ```
 python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq

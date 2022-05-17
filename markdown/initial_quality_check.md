@@ -26,6 +26,14 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l  
 0
 ```
+Checking per base sequence quality:
+```
+grep "Per base sequence quality" */fastqc_data.txt | grep pass | wc -l
+67
+grep "Per base sequence quality" */fastqc_data.txt | grep fail | wc -l
+103
+```
+
 #### Progression Model
 We have 91 samples and therefore 182 read files (one forward .fastq.gz and one reverse .fastq.gz file per sample). We should see 182 files passing the Adapter Content test:
 ```
@@ -33,6 +41,13 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l
 182  
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l  
 0
+```
+Checking per base sequence quality:
+```
+grep "Per base sequence quality" */fastqc_data.txt | grep pass | wc -l
+0
+grep "Per base sequence quality" */fastqc_data.txt | grep fail | wc -l
+97
 ```
 
 ### Identifying a Read Length Minimum Threshold

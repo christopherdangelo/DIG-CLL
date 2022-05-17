@@ -7,3 +7,5 @@
 - [Initial Data Quality Check](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/initial_quality_check.md)
 - [Pre-processing in QIIME](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/qiime_preprocess.md)
 
+## License
+Please see the license for this work before reuse: [License]()

@@ -3,9 +3,8 @@
 ## Project Navigation
 - [Project Computational Dependencies](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/project_dependencies.md)
 - [Data Download and Description](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/data_description.md)
-
-### Transfer to HCC
-Kate will add details (this is relatively simple) at a later date. SCP was used on the command line
+- [Project Computing Environment: Holland Computing Center](https://hcc.unl.edu/)
+- [Data Quality Check]()
 
 ## FastQC Analysis
 Each file was run through FASTQC 0.11.7. Results can be found under `/home/biocore/kdempsey/elgamal/fastqc/` 

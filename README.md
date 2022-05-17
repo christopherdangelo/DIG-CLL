@@ -9,6 +9,7 @@ Kate To Do:
 - PDF for the kit itself does have adapter sequences - look on the shared drive
 - Form a methods justification for not trimming reads but also report back on concerns: Sequences are high quality
 - Can always re run if needed 
+- Look at the lit on the shared drive to see what other advanced analyses we could try
 
 ## Project Navigation
 - [Project Computational Dependencies](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/project_dependencies.md)

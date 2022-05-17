@@ -3,6 +3,7 @@
 "Progression model" refers to 16s rRNA analysis of fecal pellets untreated mice collected over time.
 
 ## Data Download
+
 ### Adoptive Transfer Model
 Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpace Downloader Tool. 
 - 103 Paired-End sample reads were downloaded. They are named using the following syntax:
@@ -31,3 +32,4 @@ Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace 
 
 ### Transfer to HCC
 Kate will add details (this is relatively simple) at a later date. SCP was used on the command line
+

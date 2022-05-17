@@ -83,11 +83,41 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l
 # Navigate to the folder where you will be running the Python script
 # This is most likely the fastqc folder containing unzipped subfolders with fastqc results
 # See the 'Checking Adapter Content' to see how to do this automatically
-ls -1a */fastqc_data.txt > fastqc_data_files.list
+ls -la */fastqc_data.txt > fastqc_data_files.list
 ```
-2. This generates a file called `fastqc_data_files.list`. You can store this in the fastqc folder or wherever you prefer, just keep track of where this list is.
-3. Then, you can run the Python 3 script found here:
-- asdasd
+This generates a file called `fastqc_data_files.list`. You can store this in the fastqc folder or wherever you prefer, just keep track of where this list is. Then, you can run the Python 3 script found here: 
+```
+python3 parse_fastqc_data.py | sort | uniq
+```
+This Python script opens each FASTQC report summary and identifies at what length the reads in that report fall below some quality threshold coded in the Python script as the `threshold` variable. The output of this script + bash commands will give you the lengths at which reads in that dataset start to fall below the quality threshold.
+#### Adoptive Model
+```
+python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq
+**205-209**
+220-224
+225-229
+245-249
+250-254
+265-269
+270-274
+285-289
+290-294
+```
+#### Progression Model
+```
+python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq
+**205-209**
+220-224
+225-229
+245-249
+250-254
+265-269
+270-274
+285-289
+290-294
+```
+
+From this analysis using a quality score threshold of **28**, we see that if we want to trim reads to having a quality score higher than 28, we should trip them to length of 205 or less. (Reads are 300bp long off this machine)
 
 ## QIIME Analysis
 QIIME2 version 2022.2 was used; you can invoke it by running the following command:  

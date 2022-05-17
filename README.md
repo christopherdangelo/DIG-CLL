@@ -50,8 +50,8 @@ This command was short enough to run on the login node, but could be transformed
 After this run was completed, we wanted to determine if adapter sequences needed to be removed and also determine a universal length to use to trim the reads that would ensure high quality data. All data was considered high quality but trimming it further allows us to guarantee quality scores above a certain threshold.
 
 ### Checking Adapter Content
-1. Navigate to the directory where FASTQC folders are located. In our analysis, it was`/home/biocore/kdempsey/elgamal/fastqc/` 
-2. FASTQC puts all the results in a .zip file with accompanying HTML file. Since we are looking at 206 files remotely we do not want to 'spot check' each by eye. We need to access the data in txt format. 
+1. Navigate to the directory where FASTQC folders are located. 
+2. FASTQC puts all the results in a .zip file with accompanying HTML file. Since we are looking at a larger number of files remotely we do not want to 'spot check' each by eye. We need to access the data in txt format. 
 3. To do this, we unzip all the fastqc files in the fastqc directory using this script: [unzip_fastqc.sh](https://github.com/christopherdangelo/DIG-CLL/blob/main/FASTQC_Analysis/unzip_fastqc.sh)
 4. Each zip file then gets expanded to a folder named after the .fastq file it was created for and contains a number of files. We want to access the `fastqc_data.txt` file, which contains the same information that is contained the report's HTML file ([an example can be found here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html#M10).
 5. We used a simple grep statement to check and see how many of each of these files passed the 'Adapter Content' test in FASTQC:
@@ -72,7 +72,7 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l
 We have 91 samples and therefore 182 read files (one forward .fastq.gz and one reverse .fastq.gz file per sample). We should see 182 files passing the Adapter Content test:
 ```
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l  
-206  
+182  
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l  
 0
 ```

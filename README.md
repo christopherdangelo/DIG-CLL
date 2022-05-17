@@ -22,7 +22,7 @@ Data was downloaded from Illumina BaseSpace on April 29, 2022 using the BaseSpac
   - HCC (4Gb)
   - Online BaseSpace (5Gb)
 - Illumina reports 268,790 total raw reads in the dataset
-- Data was then moved to the `/home/biocore/kdempsey/elgamal/adaptive_model/fastq/` folder
+- Data was then moved to the `/home/biocore/kdempsey/elgamal/adoptive_model/fastq/` folder
 
 ### Progression Model
 Data was downloaded from Illumina BaseSpace on May 10, 2022 using the BaseSpace Downloader Tool. 
@@ -60,7 +60,7 @@ After this run was completed, we wanted to determine if adapter sequences needed
 cat */fastqc_data.txt | grep "Adapter Content" | grep "PASS" -i | wc -l
 cat */fastqc_data.txt | grep "Adapter Content" | grep "FAIL" -i | wc -l
 ```
-### Adoptive Model
+#### Adoptive Model
 We have 103 samples and therefore 206 read files (one forward .fastq.gz and one reverse .fastq.gz file per sample). We should see 206 files passing the Adapter Content test:
 ```
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l  
@@ -68,7 +68,7 @@ $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep fail -i | wc -l  
 0
 ```
-### Progression Model
+#### Progression Model
 We have 91 samples and therefore 182 read files (one forward .fastq.gz and one reverse .fastq.gz file per sample). We should see 182 files passing the Adapter Content test:
 ```
 $ cat */fastqc_data.txt | grep "Adapter Content" | grep pass -i | wc -l  

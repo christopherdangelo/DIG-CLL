@@ -1,7 +1,8 @@
 # DIG-CLL 
 
 ## Project Navigation
-- [Project Dependencies]()
+- [Project Computational Dependencies](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/project_dependencies.md)
+- [Data Download and Description](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/data_description.md)
 
 ## Dataset Description
 "Adoptive Transfer model" refers to 16s rRNA analysis of fecal pellets from mice treated with antibiotics + controls.  

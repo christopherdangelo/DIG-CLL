@@ -11,4 +11,4 @@
 Please see the license for this work before reuse: [License](https://github.com/christopherdangelo/DIG-CLL/blob/main/LICENSE)
 
 ## Contact
-Please contact Kate Cooper at kmcooper [at] unomaha [dot] edu for questions.
+Please contact Kate Cooper at kmcooper [at] unomaha [dot] edu for questions about the GitHub repo.

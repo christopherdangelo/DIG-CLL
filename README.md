@@ -5,10 +5,7 @@ This is a private GitHub repository for microbiome analaysis
 To be added - description of mouse, methods, etc, if desired
 
 Kate To Do:
-- as of May 17 we are not planning on trimming the reads - kate triple check the literature
-- PDF for the kit itself does have adapter sequences - look on the shared drive
-- Form a methods justification for not trimming reads but also report back on concerns: Sequences are high quality
-- Can always re run if needed 
+- Triple check the literature and form a methods justification for not trimming reads but also report back on concerns
 - Look at the lit on the shared drive to see what other advanced analyses we could try
 
 ## Project Navigation

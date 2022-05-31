@@ -11,5 +11,19 @@ qiime tools import --type 'SampleData[PairedEndSequencesWithQuality]' \
   --input-path manifest \  
   --output-path paired-end-demux.qza \  
   --input-format PairedEndFastqManifestPhred33V2  
+ 
+qiime demux summarize \
+        --i-data artifacts/demuxed-paired-end.qza \
+        --o-visualization artifacts/demux.qzv
+
+qiime cutadapt trim-paired \
+        --i-demultiplexed-sequences artifacts/demuxed-paired-end.qza \
+        --p-front-f TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG \
+        --p-front-r GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC \
+        --o-trimmed-sequences artifacts/paired-end-demux-trimmed.qza \
+        --verbose > cutadapt_log.txt \
+
+qiime demux summarize \
+        --i-data artifacts/paired-end-demux-trimmed.qza \
 ```
 Cutadapt docs: https://docs.qiime2.org/2022.2/plugins/available/cutadapt/trim-paired/

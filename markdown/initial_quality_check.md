@@ -103,4 +103,4 @@ This generates a file called `multi_qc_report.html`. The reports for the adoptiv
 [Adoptive Model MultiQC Report](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/adoptive_model_multiqc_report.html)
 [Progressive Model MutliQC Report](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/progression_model_multiqc_report.html)
 
-You will have to download the files and open them in a browser to view.
+You will have to download the files and open them in a browser to view..

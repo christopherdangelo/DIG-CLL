@@ -11,7 +11,7 @@ Kate To Do:
 
 ## Project Workflow (In-Progress)
 Link to LucidChart: [Click here](https://lucid.app/lucidchart/00d811e1-2a9d-42bc-b14b-11ca1f35a773/edit?viewport_loc=-45%2C494%2C1561%2C699%2C0_0&invitationId=inv_806fe481-b60f-4c04-ac4d-73850baadf0e#)
-![](image.png)
+![image.png](https://github.com/christopherdangelo/DIG-CLL/blob/main/images/ElGamal_Microbiome_workflow.png)
 
 ## Project Navigation
 - [Project Computational Dependencies](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/project_dependencies.md)

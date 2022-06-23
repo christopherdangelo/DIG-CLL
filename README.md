@@ -5,7 +5,6 @@ This is a private GitHub repository for microbiome analaysis
 To be added - description of mouse, methods, etc, if desired
 
 Kate To Do:
-- Triple check the literature and form a methods justification for not trimming reads but also report back on concerns
 - Look at the lit on the shared drive to see what other advanced analyses we could try
 - ASH Abstracts due August 2, early July as a target for some results to possibly include 
   - focus on adoptive transfer possibly for this

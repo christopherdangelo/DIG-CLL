@@ -92,3 +92,13 @@ python3 ~/elgamal/bin/parse_fastqc_data.py | sort | uniq
 ```
 
 From this analysis using a quality score threshold of **28**, we see that if we want to trim reads to having a quality score higher than 28, we should trip them to length of 205 or less. (Reads are 300bp long off this machine)
+
+## MultiQC Analysis
+MultiQC allows for aggregate analysis of all FASTQ files; this was run on the adoptive model sample files:
+```
+module load multiqc/py37/1.8
+multiqc /home/biocore/kdempsey/elgamal/adoptive_model/fastqc/
+```
+This generates a file called `multi_qc_report.html`. The reports for the adoptive and progressive models are below:
+[Adoptive Model MultiQC Report]()
+[Progressive Model MutliQC Report]()

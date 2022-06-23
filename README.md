@@ -16,7 +16,7 @@ Kate To Do:
 - [Project Computing Environment: Holland Computing Center](https://hcc.unl.edu/)
 - [Initial Data Quality Check](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/initial_quality_check.md)
 - [Pre-processing in QIIME](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/qiime_preprocess.md)
-- [Error Correction in QIIME]()
+- [De-noise and Identify Taxa](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/denoise_id_taxa.md)
 - [Feature Table Analysis: Diversity, etc](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/feature_table_analysis.md)
 - [Representative Seq Analysis: Taxonomy, etc]()
 

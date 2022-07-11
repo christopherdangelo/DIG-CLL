@@ -21,19 +21,19 @@ Outputs:
 - **Views**: demux_before_cutadapt.qzv
 
 `qiime cutadapt trim-paired`  
-Function: Trims adapter sequences out (usage for this run only, it can vary)   
+Function: Removes adapter sequences (usage for this run only, it can vary), this *does not* trim the reads!      
 Inputs: The paired end artifact that was loaded previously using `qiime load`   
 Outputs: an artifact and a log file 
 - **Artifacts**: demux-paired-end-pre-trim.qza   
 - **Views**: None
 - **Other**: cutadapt_log.txt   
 
-To view the results of the cutadapt trimming, we can summarize it again:
+To view the results of the cutadapt trimming, we can summarize it again:    
 `qiime demux summarize`  
 Function: Summarizes the data   
 Inputs: demux-paired-end-pre-trim.qza  
 Outputs: 
 - **Artifacts**: None
 - **Views**: demux-paired-end-pre-trim.qzv
-
+![demux-paired-end-pre-trim.qzv](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/demux-paired-end-pre-trim.png)
 

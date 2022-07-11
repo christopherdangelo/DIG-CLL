@@ -22,7 +22,7 @@ Link to LucidChart: [Click here](https://lucid.app/lucidchart/00d811e1-2a9d-42bc
 - [De-noise and Identify Taxa](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/denoise_id_taxa.md)
 - [Feature Table Analysis: Diversity, etc](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/feature_table_analysis.md)
 - [Representative Seq Analysis: Taxonomy, etc]()
-- [Preliminary Results]()
+- [Preliminary Results](https://github.com/christopherdangelo/DIG-CLL/blob/main/markdown/preliminary_results.md)
 
 ## License
 Please see the license for this work before reuse: [License](https://github.com/christopherdangelo/DIG-CLL/blob/main/LICENSE)

@@ -1,10 +1,8 @@
 # Preliminary Results
 Current as of July 11, 2022
 
-# Loading the Data and Examining Quality
-
-### Import the data into QIIME 
-In the first file, `load_data.slurm`, I run the following commands:
+## Loading the Data and Examining Quality
+In the first file, `load_data.slurm`, I run the following commands. Note that our data is already demultiplexed (comes one sample per FASTQ file) so we refer to it as "demux-ed" which is short for "de-multiplexed":
 
 `qiime tools import`  
 Function: Imports the data into QIIME2 format    
@@ -38,3 +36,6 @@ Outputs:
 
 ![demux-paired-end-pre-trim.qzv](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/demux-paired-end-pre-trim.png)
 
+We can see that some trimming still needs to be made.
+
+## Denoising and Identifying the Reads

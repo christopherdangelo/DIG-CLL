@@ -35,5 +35,6 @@ Inputs: demux-paired-end-pre-trim.qza
 Outputs: 
 - **Artifacts**: None
 - **Views**: demux-paired-end-pre-trim.qzv
+
 ![demux-paired-end-pre-trim.qzv](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/demux-paired-end-pre-trim.png)
 

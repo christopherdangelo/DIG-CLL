@@ -1,48 +1,12 @@
 ## Denoising with DADA2
-```
-# Identify the trim/trunc length for DADA2 based on QC analysis 
-# Number of threads will depend on your computing environment
-p_trunc_len_f=270
-p_trunc_len_r=270
-n_threads=16
+Reads were trimmed at 275 (forward) and 275 (reverse) based on sample quality. The results of denoising can be found in the *denoising-stats.qzv* file on the shared folder.
 
-echo "Starting dada2: `date`"
-qiime dada2 denoise-paired \
-        --i-demultiplexed-seqs artifacts/demux-paired-end-pre-trim.qza \
-        --p-trunc-len-f $p_trunc_len_f \
-        --p-trunc-len-r $p_trunc_len_r \
-        --p-n-threads $n_threads \
-        --o-table artifacts/table.qza \
-        --o-representative-sequences artifacts/rep-seqs.qza \
-        --o-denoising-stats artifacts/denoising-stats.qza
-echo "dada2 complete: `date`"
-```
+The average percentage of non-chimeric reads that were retained from all datasets is 26.08%, with a minimum of 12.13% and a maximum of 46.95%. We can investigate if there were additional PCR primers that need to be removed from these sequences to help increase the yield (I am wondering if we are missing some primers based on the cutadapt results above hovering around 66-57%. This is not inherently concerning but could allow us to retain some more reads if we remove them).
+====
+Sampling depth chosen: 32039 based on table-viz.qzv (viewed on QIIME View). This depth will retained 1,249,521 (25.14%) features in 39 (100.00%) samples. I wanted to be careful about removing too many samples since some of the groups have a lower sample count, but we can remove more if needed.
 
-```
-qiime metadata tabulate \
-       --m-input-file artifacts/denoising-stats.qza \
-        --o-visualization artifacts/denoising-stats-viz.qzv
+Taxa are identified in the taxonomy.qzv file but this is before any taxa are filtered out; we do remove Unassigned taxa as well as Eukaryota before plotting the taxa as bar plots: taxa-bar-plots.qzv
 
-echo "metadata complete: `date`"
+The taxa bar plot, before removing Unassigned and Eukaryota, is below for the Phylum level: The taxa bar plot, before removing Unassigned and Eukaryota, is below for the Phylum level:
 
-qiime feature-table filter-samples \
-    --i-table artifacts/table.qza \
-    --m-metadata-file metadata.tsv \
-    --o-filtered-table artifacts/table.qza
-
-echo "feature table complete: `date`"
-
-qiime feature-table summarize \
-        --i-table artifacts/table.qza \
-        --o-visualization artifacts/table-viz.qzv \
-        --m-sample-metadata-file metadata.tsv
-
-echo "feature table summarize complete: `date`"
-
-qiime feature-table tabulate-seqs \
-        --i-data artifacts/rep-seqs.qza \
-        --o-visualization artifacts/rep-seqs.qzv
-```
-
-
-
+The taxa bar plots, after removing Unassigned and Eukaryota, is below for the Phylum level:

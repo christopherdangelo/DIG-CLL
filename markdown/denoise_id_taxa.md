@@ -8,7 +8,7 @@ Minimum: 12.13%
 Maximum of 46.95%   
 We can investigate if there were additional PCR primers that need to be removed from these sequences to help increase the yield. This looks like a chimera problem - do we know how many cycles of PCR were run?    
 
-**Using sklearn and default DADA2 parameters with parent parameter increased:**
+**Using sklearn and default DADA2 parameters with parent parameter increased:**    
 --p-min-fold-parent-over-abundance 4   
 Average percentage of non-chimeric reads: 27.35%   
 Minimum: 13.57%   

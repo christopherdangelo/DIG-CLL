@@ -1,5 +1,7 @@
-# Set working directory to the place which have:
-# 'metadata.tsv', 'table.qza', 'taxonomy.qza'
+# Set working directory to the directory which contains the following files:
+# 1. metadata.tsv 
+# 2. table.qza
+# 3. taxonomy.qza
 setwd("~/Downloads/qiime2_output")
 
 # Try loading the packge 
@@ -68,12 +70,17 @@ barplot_s <- taxa_barplot(taxasums_s, metadata)
 ggsave("barplot_s.pdf", height=4, width=8, device="pdf")
 
 ##################################################
-# By TREATMENT
+# By categories in your metadata file
+# If there is a categorical variable in your metadata file,
+# you can group the heatmaps by them
 ##################################################
+
+# Set the category in your metadata file
+category_title = "tx-group"
 
 # Plotting Heatmaps for each level (2-7)
 # Phylum
-heatmap_p <- taxa_heatmap(taxasums_p, metadata, category = "tx-group")
+heatmap_p <- taxa_heatmap(taxasums_p, metadata, category = category_title)
 ggsave("heatmap_p.pdf", height=4, width=8, device="pdf")
 # Class
 heatmap_c <- taxa_heatmap(taxasums_c, metadata, category = "tx-group")

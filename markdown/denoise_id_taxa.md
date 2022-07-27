@@ -14,9 +14,14 @@ We can investigate if there were additional PCR primers that need to be removed 
 --p-min-fold-parent-over-abundance 4   
 Average percentage of non-chimeric reads: 27.35%   
 Minimum: 13.57%   
-Maximum of 47.13%.  
+Maximum of 47.13%  
 
 **Using consensus and default DADA2 parameters:**.    
 [Source](https://otagoedna.github.io/getting_started_with_qiime2/taxonomy_assignment/Exploring_Taxonomy_Assignment.html).  
+Average percentage of non-chimeric reads: 26.08%   
+Minimum: 12.13%   
+Maximum of 46.95%  
+![image](https://user-images.githubusercontent.com/32070039/181382083-c9467deb-ed13-4a9e-bb3a-d0e5b1173db3.png)
+
 
 Crane is currently down and I am waiting for results of this run.

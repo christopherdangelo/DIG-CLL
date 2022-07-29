@@ -23,4 +23,9 @@ Minimum: 12.13%
 Maximum of 46.95%  
 
 **Using consensus and DADA2 parameters with parent parameter increased (4):**.    
-Currently running.
+```
+--p-min-fold-parent-over-abundance 4   
+```
+Average percentage of non-chimeric reads: 27.35%   
+Minimum: 13.57%   
+Maximum of 47.13% 

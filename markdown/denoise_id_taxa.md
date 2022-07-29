@@ -1,7 +1,7 @@
 ## Denoising with DADA2
 Reads were trimmed at 275 (forward) and 275 (reverse) based on sample quality. The results of denoising can be found in the *denoising-stats.qzv* file on the shared folder.
 
-### Reducing Chimeras - Options
+### Reducing Chimeras SELECTED Method
 **SELECTED: Using sklearn and default DADA2 parameters with parent parameter increased (4):**    
 ```
 --p-min-fold-parent-over-abundance 4   
@@ -10,7 +10,7 @@ Average percentage of non-chimeric reads: 27.35%
 Minimum: 13.57%   
 Maximum of 47.13%  
 
-#### Other options I tried are below
+### Reducing Chimeras: Other options I tried are below
 **Using sklearn and default DADA2 parameters:** 
 Average percentage of non-chimeric reads: 26.08%  
 Minimum: 12.13%   

@@ -10,6 +10,7 @@ Average percentage of non-chimeric reads: 27.35%
 Minimum: 13.57%   
 Maximum of 47.13%  
 
+#### Other options I tried are below
 **Using sklearn and default DADA2 parameters:** 
 Average percentage of non-chimeric reads: 26.08%  
 Minimum: 12.13%   

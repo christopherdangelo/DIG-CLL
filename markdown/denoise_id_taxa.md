@@ -41,7 +41,7 @@ The taxa bar plots, _after_ removing Unassigned and Eukaryota, is below for the 
 
 ## Normalization using SRS
 Normalization using SRS (scaling with ranked subsampling) method:
-Theamplicon sequence variant (ASV)/operational taxonomic unit (OTU) file found in the artifacts directory, `table.qza`, was uploaded to the [SRS Shiny app ](https://vitorheidrich.shinyapps.io/srsshinyapp/) in order to choose a sampling depth (Cmin) or the normalization cut-off value. The selection of a Cmin of 4500 allows for retention of 100% of samples and a % retained diversity  ranging from 62-100% per sample.
+The amplicon sequence variant (ASV) file found in the artifacts directory, `table.qza`, was uploaded to the [SRS Shiny app ](https://vitorheidrich.shinyapps.io/srsshinyapp/) in order to choose a sampling depth (Cmin) or the normalization cut-off value. The selection of a Cmin of 4500 allows for retention of 100% of samples and a % retained diversity  ranging from 62-100% per sample.
 ![SRS Shiny](https://github.com/AbdallaBiome/Biome2021/blob/main/results/srs_shiny_for_cmin.png)
 
 You can also visualize it with the following QIIME command; the version used here is only available in an older versio of QIIME, hence the change in version:

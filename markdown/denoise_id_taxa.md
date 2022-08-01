@@ -41,8 +41,17 @@ The taxa bar plots, _after_ removing Unassigned and Eukaryota, is below for the 
 
 ## Normalization using SRS
 Normalization using SRS (scaling with ranked subsampling) method:
-The amplicon sequence variant (ASV) file found in the artifacts directory, `table.qza`, was uploaded to the [SRS Shiny app ](https://vitorheidrich.shinyapps.io/srsshinyapp/) in order to choose a sampling depth (Cmin) or the normalization cut-off value. The selection of a Cmin of 2250 allows for retention of 95 out of 103 samples (92.23%) and a % retained diversity  ranging from 63.6-100% per sample.
-![SRS Shiny Cmin selection]()
+The amplicon sequence variant (ASV) file found in the artifacts directory, `table.qza`, was uploaded to the [SRS Shiny app ](https://vitorheidrich.shinyapps.io/srsshinyapp/) in order to choose a sampling depth (Cmin) or the normalization cut-off value. The selection of a Cmin of 2250 allows for retention of 95 out of 103 samples (92.23%) and a % retained diversity  ranging from 63.6-100% per sample. The following samples were discarded as a result of this decision:
+1. 100-S100-L001
+2. 102-S102-L001
+3. 103-S103-L001
+4. 80-S80-L001
+5. 83-S83-L001
+6. 87-S87-L001
+7. 93-S93-L001
+8. 99-S99-L001
+
+![SRS Shiny Cmin selection](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/srs_curves.png)
 
 You can also visualize it with the following QIIME command; the version used here is only available in an older versio of QIIME, hence the change in version:
 ```

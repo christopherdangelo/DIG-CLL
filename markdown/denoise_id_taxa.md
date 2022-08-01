@@ -37,6 +37,7 @@ Sampling depth chosen: 8398 based on `table-viz.qzv` (viewed on QIIME View). Thi
 Taxa are identified in the `taxonomy.qzv` file; we also view the taxa as bar plots: `taxa-bar-plots.qzv`
 
 The taxa bar plots, _after_ removing Unassigned and Eukaryota, is below for the Phylum level:
+![taxa bar plots for phylum level](https://github.com/christopherdangelo/DIG-CLL/blob/main/results/taxa_barplot_phylum.png)
 
 ## Normalization using SRS
 Normalization using SRS (scaling with ranked subsampling) method:

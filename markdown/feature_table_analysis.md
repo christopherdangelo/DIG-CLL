@@ -4,3 +4,7 @@ Input: Folder containing the following files: metadata.tsv, norm-table.qza, taxo
 Then we run the following: [heatmaps_and_barplots.R](https://github.com/christopherdangelo/DIG-CLL/blob/main/R_scripts/heatmaps_and_barplots.R)
 
 Here is an example output from that R script, the heatmap of relative abundance grouped by treatment for the family level:
+![heatmap of abundance grouped by tx group at the family level](https://github.com/christopherdangelo/DIG-CLL/blob/main/images/heatmap_family_by_tx.png)
+
+Here is an example output from that R script, the barplot of relative abundance grouped by treatment for the family level:
+![barplot of abundance grouped by tx group at the family level](https://github.com/christopherdangelo/DIG-CLL/blob/main/images/barplot_family_by_tx.png)

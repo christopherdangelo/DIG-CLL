@@ -48,7 +48,7 @@ heatmap_c <- taxa_heatmap(taxasums_c, metadata, category = category_title)
 ggsave(paste0("heatmap_c_",category_title,".pdf"), height=4, width=8, device="pdf")
 # Order
 heatmap_o <- taxa_heatmap(taxasums_o, metadata, category = category_title)
-ggsave(paste0("heatmap_p_",category_title,".pdf"), height=4, width=8, device="pdf")
+ggsave(paste0("heatmap_o_",category_title,".pdf"), height=4, width=8, device="pdf")
 # Family
 heatmap_f <- taxa_heatmap(taxasums_f, metadata, category = category_title)
 ggsave(paste0("heatmap_f_",category_title,".pdf"), height=4, width=8, device="pdf")

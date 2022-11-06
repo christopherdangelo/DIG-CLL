@@ -39,3 +39,21 @@ stat_compare_means(label = "p.signif", method = "wilcox.test", ref.group = "0.5"
 ch + theme(axis.text.x = element_text(face="bold", color="black", size=8, angle=90),
            axis.text.y = element_text(face="bold", color="black", size=8, angle=90)) 
 ggsave("shannon.png",plot = ch)
+
+x_name = "Type"
+# Boxplot by Tx only using Wilcoxon for significance (Unpaired, 2 groups, non parametric)
+my_comparisons <- list( c("WT_4mo", "TCL1_4mo"),
+                        c("WT_7mo", "TCL1_7mo"),
+                        c("WT_10mo", "TCL1_10mo"),
+                        c("WT_12mo", "TCL1_12mo"))
+level_order <- c('WT_4mo', 'TCL1_4mo','WT_7mo','TCL1_7mo','WT_10mo','TCL1_10mo','WT_12mo','TCL1_12mo')
+ch <- ggplot(data,aes(x=factor(geno_x_time, level=level_order),y=shannon_entropy,fill=genotype)) + geom_boxplot() + 
+  scale_y_continuous(breaks = seq(0,9,0.25),name ="Shannon Entropy") + scale_x_discrete(name=x_name) + stat_compare_means(comparisons = my_comparisons)
+
+
+#+ stat_compare_means(comparisons = my_comparisons)
+stat_compare_means(label = "p.signif", method = "wilcox.test", ref.group = "0.5")    
+ch + theme(axis.text.x = element_text(face="bold", color="black", size=8, angle=90),
+           axis.text.y = element_text(face="bold", color="black", size=8, angle=90)) 
+ch
+ggsave("shannon_geno_x_time.png",plot = ch)

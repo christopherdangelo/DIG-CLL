@@ -5,7 +5,7 @@
 # 1. metadata.tsv 
 # 2. table.qza or norm-table.qza
 # 3. taxonomy.qza
-setwd("/Users/kmcooper/Downloads/")
+setwd("/user/working/directory")
 
 # Set the category in your metadata file (i.e. "tx-group" or "timepoint"
 # Name should exact match the column in the metadata file

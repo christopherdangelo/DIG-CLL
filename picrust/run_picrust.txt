@@ -1,0 +1,6 @@
+Download:
+dna-sequences.fasta 
+feature-table-w-taxa.biom -o output -p 1
+cd /Users/katedempsey/sandbox/picrust2-2.4.1/scripts
+conda activate picrust2
+python3 picrust2_pipeline.py -s ~/Downloads/progression_10mo_WTTCL1/dna-sequences.fasta -i ~/Downloads/progression_10mo_WTTCL1/feature-table-w-taxa.biom -o ~/Downloads/progression_10mo_WTTCL1/picrust_results -p 1

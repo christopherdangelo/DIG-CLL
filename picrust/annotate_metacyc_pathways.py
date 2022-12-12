@@ -23,13 +23,27 @@ while(line):
 	tokens = line.split("\t")
 	pwy_abbrev = tokens[0]
 	pwy_lda = tokens[1]
-	pwy_group = tokens[2]
+	pwy_group = ""
+	score1 = "-"
+	score2 = "-"
+	if(tokens[2]):
+		pwy_group = tokens[2]
+	else:
+		pwy_group = "none"
+	if(tokens[3]):
+		score1 = tokens[3]
+	else:
+		score1 = "-"
+	if(tokens[4]):
+		score2 = tokens[4]
+	else:
+		score2="-"
 	if pwy_abbrev in pathway_annotations.keys():
-		print(pwy_abbrev+"\t"+pathway_annotations[pwy_abbrev]+"\t"+pwy_lda+"\t"+pwy_group+"\t"+"https://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object="+pwy_abbrev)
+		print(pwy_abbrev+"\t"+pathway_annotations[pwy_abbrev]+"\t"+pwy_lda+"\t"+pwy_group+"\t"+score1+"\t"+score2+"\t"+"https://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object="+pwy_abbrev)
 	else:
 		pwy_abbrev_dashed = pwy_abbrev.replace("_","-")
 		if pwy_abbrev_dashed in pathway_annotations.keys():
-			print(pwy_abbrev+"\t"+pathway_annotations[pwy_abbrev_dashed]+"\t"+pwy_lda+"\t"+pwy_group+"\t"+"https://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object="+pwy_abbrev_dashed)
+			print(pwy_abbrev+"\t"+pathway_annotations[pwy_abbrev_dashed]+"\t"+pwy_lda+"\t"+score1+"\t"+score2+"\t"+pwy_group+"\t"+"https://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object="+pwy_abbrev_dashed)
 		else:		
 			print(pwy_abbrev+"\t"+"No Metacyc mapping found"+"\t"+pwy_lda+"\t"+pwy_group)
 	line = f.readline().rstrip()

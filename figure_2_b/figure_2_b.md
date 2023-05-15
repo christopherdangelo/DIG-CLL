@@ -4,9 +4,8 @@ Analysis was performed on a high performance computing system using SLURM schedu
 - SILVA database formatted for QIIME
 Panel A was created from the folder named progression_model_3_excl on the HPC system.
 
-First, data was loaded:
+First, data was loaded and trimmed:
 ```
-#!/bin/bash
 module load qiime2/2022.2
 
 # File organization setup
@@ -40,4 +39,71 @@ qiime cutadapt trim-paired \
 qiime demux summarize \
 	--i-data artifacts/demux-paired-end-pre-trim.qza \
 	--o-visualization artifacts/demux-paired-end-pre-trim.qzv
+```
 
+Next, the trimmed data was uploaded and denoised using DADA2. Eurkayotes and Archaebacteria are removed:"
+```
+# DADA2 denoising parameters - trim length - are defined below
+p_trunc_len_f=280
+p_trunc_len_r=255
+n_threads=16
+
+module load qiime2/2022.2
+
+cd working_directory
+
+qiime dada2 denoise-paired \
+	--i-demultiplexed-seqs artifacts/demux-paired-end-pre-trim.qza \
+	--p-trunc-len-f $p_trunc_len_f \
+	--p-trunc-len-r $p_trunc_len_r \
+	--p-n-threads $n_threads \
+	--o-table artifacts/table.qza \
+	--o-representative-sequences artifacts/rep-seqs.qza \
+	--o-denoising-stats artifacts/denoising-stats.qza
+
+qiime metadata tabulate \
+       --m-input-file artifacts/denoising-stats.qza \
+        --o-visualization artifacts/denoising-stats-viz.qzv
+
+qiime feature-table filter-samples \
+    --i-table artifacts/table.qza \
+    --m-metadata-file metadata.tsv \
+    --o-filtered-table artifacts/table.qza
+
+qiime feature-table summarize \
+        --i-table artifacts/table.qza \
+        --o-visualization artifacts/table-viz.qzv \
+        --m-sample-metadata-file metadata.tsv
+
+qiime feature-table tabulate-seqs \
+        --i-data artifacts/rep-seqs.qza \
+        --o-visualization artifacts/rep-seqs.qzv
+
+qiime phylogeny align-to-tree-mafft-fasttree \
+        --i-sequences artifacts/rep-seqs.qza \
+        --o-alignment artifacts/aligned-rep-seqs.qza \
+        --o-masked-alignment artifacts/masked-aligned-rep-seqs.qza \
+        --o-tree artifacts/unrooted-tree.qza \
+        --o-rooted-tree artifacts/rooted-tree.qza
+
+qiime feature-classifier classify-sklearn \
+        --i-classifier silva-138-99-nb-classifier.qza \
+        --i-reads artifacts/rep-seqs.qza \
+        --o-classification artifacts/taxonomy.qza
+
+qiime metadata tabulate \
+        --m-input-file artifacts/taxonomy.qza \
+        --o-visualization artifacts/taxonomy.qzv
+	
+qiime taxa filter-table \
+    --i-table artifacts/table.qza \
+    --i-taxonomy artifacts/taxonomy.qza \
+    --p-exclude eukarya,archaea \
+    --o-filtered-table artifacts/table.qza
+
+qiime taxa barplot \
+    --i-table artifacts/table.qza \
+    --i-taxonomy artifacts/taxonomy.qza \
+    --m-metadata-file metadata.tsv \
+    --o-visualization artifacts/taxa-bar-plots.qzv
+```

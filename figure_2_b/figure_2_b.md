@@ -2,6 +2,7 @@ Analysis was performed on a high performance computing system using SLURM schedu
 - manifest file
 - metadata.tsv file, validated 
 - SILVA database formatted for QIIME
+Panel A was created from the folder named progression_model_3_excl on the HPC system.
 
 First, data was loaded:
 ```

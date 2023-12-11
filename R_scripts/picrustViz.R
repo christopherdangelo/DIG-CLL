@@ -52,3 +52,15 @@ p <- pathway_errorbar(abundance = kegg_abundance,
                       x_lab = "pathway_name")
 
 p <- pathway_errorbar(abundance = kegg_abundance, daa_results_df = daa_annotated_results_df, Group = metadata$timepoint, p_values_threshold = 0.05, order = "pathway_class", select = NULL, ko_to_kegg = TRUE, p_value_bar = TRUE, colors = NULL, x_lab = "pathway_name")
+pdf(file = paste0(filepath,"/picrust/ggpicrust2.pdf"),width = 11)
+pca_plot
+heatmap_plot
+p
+dev.off()
+mvCom = paste0("mv /home/biocore/kdempsey/Maaslin2_results_timepoint ",filepath,"/picrust/")
+system(mvCom)
+makeCom1 = paste0("mkdir -p /home/biocore/kdempsey/Maaslin2_results_timepoint/")
+makeCom2 = paste0("touch /home/biocore/kdempsey/Maaslin2_results_timepoint/maaslin2.log")
+system(makeCom1)
+system(makeCom2)
+

@@ -5,12 +5,19 @@
 # 1. metadata.tsv 
 # 2. table.qza or norm-table.qza
 # 3. taxonomy.qza
-setwd("/user/working/directory")
+setwd("/work/biocore/kdempsey/elgamal/adoptive_model_abx_veh_3wk/fastq/")
 
 # Set the category in your metadata file (i.e. "tx-group" or "timepoint"
 # Name should exact match the column in the metadata file
-category_title = "tx-group"
+category_title = "timepoint"
 
+#
+# Install qiime2R if needed using this command:
+#if (!requireNamespace("devtools", quietly = TRUE)){install.packages("devtools")}
+#devtools::install_github("jbisanz/qiime2R")
+#
+# or you can visit the GitHub at
+# https://github.com/jbisanz/qiime2R
 
 #
 # Load libraries
@@ -20,8 +27,8 @@ library(qiime2R)
 
 # Read in the required files: 'metadata.tsv', 'norm-table.qza', 'taxonomy.qza'
 metadata <- read_q2metadata("metadata.tsv")
-features_table <- read_qza("norm-table.qza")$data
-taxonomy_table <- read_qza("taxonomy.qza")$data  
+features_table <- read_qza("artifacts/table.qza")$data
+taxonomy_table <- read_qza("artifacts/taxonomy.qza")$data  
 taxonomy_table <- parse_taxonomy(taxonomy_table)
 
 
@@ -79,3 +86,18 @@ ggsave(paste0("barplot_g_",category_title,".pdf"), height=4, width=8, device="pd
 # Species
 barplot_s <- taxa_barplot(taxasums_s, metadata, category = category_title)
 ggsave(paste0("barplot_s_",category_title,".pdf"), height=4, width=8, device="pdf")
+
+#
+# Some sample code from Syd and I's Feb 5 meeting
+# These use ggplot for visualization so can use ggplot functionality
+# to modify the aesthetic of the plots
+# 
+#
+# For example, the code below removes the x axis entirely
+#barplot_s
+#barplot_s + theme(
+#  axis.text.x = element_blank())
+#barplot_s
+
+# This works to remove "d__" in rownames for the taxasums_x list
+# rownames(taxasums_s) <- gsub("d__","",rownames(taxasums_s))

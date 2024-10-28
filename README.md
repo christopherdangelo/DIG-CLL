@@ -1,15 +1,9 @@
 # DIG-CLL 
 
 ## About the Project
-This is a private GitHub repository for microbiome analaysis
-To be added - description of mouse, methods, etc, if desired
+This is GitHub repository was prepared to accompany "Modification of the gut microbiome in Eµ-TCL1 mice reveals bacterial signature specific to chronic lymphocytic leukemia".
 
-Kate To Do:
-- Look at the lit on the shared drive to see what other advanced analyses we could try
-- ASH Abstracts due August 2, early July as a target for some results to possibly include 
-  - focus on adoptive transfer possibly for this
-
-## Project Workflow (In-Progress)
+## Project Workflow 
 Link to LucidChart: [Click here](https://lucid.app/lucidchart/00d811e1-2a9d-42bc-b14b-11ca1f35a773/edit?viewport_loc=-45%2C494%2C1561%2C699%2C0_0&invitationId=inv_806fe481-b60f-4c04-ac4d-73850baadf0e#)
 ![image.png](https://github.com/christopherdangelo/DIG-CLL/blob/main/images/ElGamal_Microbiome_workflow.png)
 
